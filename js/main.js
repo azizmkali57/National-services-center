@@ -430,14 +430,14 @@
   // Repair Cost Estimator Calculator
   const APPLIANCE_ISSUES = {
     'washing-machine': [
-      { name: 'Inspection & Comprehensive Diagnostics', price: 199 },
+      { name: 'Inspection & Comprehensive Diagnostics', price: 249 },
       { name: 'Drainage Jam / Coin Trap Cleaning', price: 499 },
       { name: 'Drum Rotation / Motor Belt Fix', price: 850 },
       { name: 'Electronic PCB Board Repair', price: 1200 },
       { name: 'Drum Bearing Replacement Overhaul', price: 1650 }
     ],
     'refrigerator': [
-      { name: 'Inspection & Cooling Diagnosis', price: 199 },
+      { name: 'Inspection & Cooling Diagnosis', price: 249 },
       { name: 'Defrost Sensor / Thermostat Renewal', price: 550 },
       { name: 'Eco Refrigerant Gas Refill & Leak Fix', price: 1400 },
       { name: 'Inverter Compressor Starter Kit', price: 950 },
@@ -451,7 +451,7 @@
       { name: 'Inverter Logic PCB Module Repair', price: 1500 }
     ],
     'microwave': [
-      { name: 'Inspection & High-Voltage Diagnosis', price: 199 },
+      { name: 'Inspection & High-Voltage Diagnosis', price: 249 },
       { name: 'Turntable Motor & Roller Ring Replacement', price: 450 },
       { name: 'Touch Membrane Keypad Repair', price: 650 },
       { name: 'Magnetron Heating Tube Renewal', price: 1100 },
@@ -494,12 +494,12 @@
     const selectedOption = calcSelect.options[calcSelect.selectedIndex];
     if (!selectedOption) return;
 
-    const price = parseInt(selectedOption.value, 10) || 199;
+    const price = parseInt(selectedOption.value, 10) || 249;
     const name = selectedOption.getAttribute('data-name') || 'Selected Service';
 
     calcTotalEl.textContent = price.toLocaleString('en-IN');
     if (calcFixNameEl) calcFixNameEl.textContent = name;
-    if (calcBaseEl) calcBaseEl.textContent = '₹' + (currentApp === 'ac' || currentApp === 'dishwasher' ? '249' : '199');
+    if (calcBaseEl) calcBaseEl.textContent = '₹249';
 
     if (calcBookBtn) {
       calcBookBtn.onclick = function() {
