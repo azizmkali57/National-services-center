@@ -324,7 +324,7 @@
 
   // WhatsApp Sender
   function sendToWhatsApp(data) {
-    const phone = '919392487129';
+    const phone = '916300454801';
     let text = 'Hello National Service Center Hyderabad,\n\nI want to book an appliance service:\n';
     if (data.name) text += '• Name: ' + data.name + '\n';
     if (data.phone) text += '• Phone: ' + data.phone + '\n';
